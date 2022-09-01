@@ -13,3 +13,4 @@
 12.script that creates a directory called my_dir with permissions 751
 13.script that changes the group owner to school for the file hello
 14.script that changes the owner to vincent and the group owner to staff
+15.script that changes the owner and the group owner of _hello to vincent and staff respectively.
