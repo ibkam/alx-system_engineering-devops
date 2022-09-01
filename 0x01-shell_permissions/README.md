@@ -9,3 +9,4 @@
 8.script that sets the permission to the file hello as follows
 9.script that sets the mode of the file hello to this
 10.script that sets the mode of the file hello the same as olleh’s mode
+11.script that adds execute permission to all subdirectories
