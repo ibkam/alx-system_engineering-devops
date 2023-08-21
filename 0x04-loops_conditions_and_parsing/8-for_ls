@@ -4,5 +4,7 @@
 list=$(ls)
 for file in $list
 do
+  if [[ ! "$file" == . * && "$file" == *-*]];
+  then
   find "$file" | cut -d- -f2
 done
