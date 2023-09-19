@@ -1,4 +1,4 @@
-#!/usr/bin/python 3
+#!/usr/bin/python3
 """
 Fetches information from JSONPlaceholder API and exports to CSV
 """
