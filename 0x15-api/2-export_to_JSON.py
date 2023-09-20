@@ -12,15 +12,13 @@ if __name__ == "__main__":
     name_url = "https://jsonplaceholder.typicode.com/users/{}".format(argv[1])
     todo_result = get(todo_url).json()
     name_result = get(name_url).json()
-
-    user_ID = {}
+    
     todo_list = []
     for todo in todo_result:
         todo_dict = {}
         todo_dict.update({"task": todo.get("title"), "completed": todo.get(
             "completed"), "username": name_result.get("username")})
-        todo_list.append(todo_dict)
-        use_ID.append(todo_list)
-
+        todo_list.append(user.get("id"):todo_dict)
+       
     with open("{}.json".format(argv[1]), 'w') as f:
         dump({argv[1]: todo_list}, f)
