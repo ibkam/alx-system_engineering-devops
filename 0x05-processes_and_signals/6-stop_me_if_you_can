@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# Stops a process matching the pattern of 4-to_infinity_and_beyond
-pkill pgrep -f 4-to_infinity_and_beyond
