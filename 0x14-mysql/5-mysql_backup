@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # backup and compress my databases
 
 # variables
