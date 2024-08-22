@@ -1,15 +1,28 @@
 #!/usr/bin/env bash
 
-# Check if exactly one argument is passed
+# Function to check if a user exists
+user_exists() {
+  id "$1" &>/dev/null
+}
+
+# Ensure exactly one argument is passed
 if [ $# -ne 1 ]; then
   echo "Usage: $0 <username>"
   exit 1
 fi
 
-# Check if the user exists on the system
-if id "$1" &>/dev/null; then
-  # Run the whoami command as the user passed in the argument
-  sudo -u "$1" whoami
+# Check if the user exists
+if user_exists "$1"; then
+  # Run the whoami command as the specified user
+  result=$(sudo -u "$1" whoami)
+  
+  # Check if the command executed successfully
+  if [ -n "$result" ]; then
+    echo "$result"
+  else
+    echo "Error: Failed to run whoami as user '$1'."
+    exit 1
+  fi
 else
   echo "Error: User '$1' does not exist."
   exit 1
